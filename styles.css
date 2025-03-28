@@ -127,11 +127,35 @@ form {
 .context {
     display: flex;
     flex-direction: column;
-    gap: calc(1.5rem + 1vw);
+    gap: 1.5rem;
     font-size: calc(1rem + .25vw)
 }
 
+button {
+    width: 20%;
+    margin: 2rem 0 2rem 2rem;
+    font-size: calc(1rem + 0.1vw);
+    min-width: 100px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #dfa058;
+}
+
+
 p.account_exist {
-    width: 100%;
+    width: 50%;
     flex: 1;
+    margin: 1rem 2rem;
+}
+
+p > a {
+    text-decoration: none;
+    color: var(--accent-color);
 }
