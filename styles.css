@@ -1,7 +1,13 @@
-@font-face {
-    font-family: "quirky";
-    src: url("/quirky-bay-font/misc/Quirky\ Bay\ -\ Free\ Version-bb5b.woff");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+:root {
+    --primary-bg: #e3eafa;
+    --second_bg: #6474a4;
+    --text-color: #333;
+    --accent-color: #f2af62;
+    --default-text: Roboto;
 }
+
 
 * {
     margin: 0;
@@ -11,29 +17,31 @@
 
 body, html {
     height: 100%;
-    margin: 0;
+    color: var(--text-color);
+    font-family: var(--default-text);
+    font-size: 16px;
 }
 
 .container {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    min-width: 400px;
 }
 
 .sidebar {
     position: relative;
     width: 35vw;
-    background-color: #6474a4;
+    background-color: var(--second_bg);
     min-width: 250px;
     max-width: 50%;
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
 .sidebar > img {
-    position: absolute;
     width: 100%;
     padding: 10px;
     object-fit: contain;
@@ -42,49 +50,88 @@ body, html {
 .page {
     display: flex;
     flex-direction: column;
-    gap: 5%;
     justify-content: center;
     flex: 1;
-    padding: 0 10%;
     overflow-y: auto;
+    width: 100%;
+    background-color: var(--primary-bg);
 }
 
 .header {
-    border: 3px solid red;
-    font-size: 32px;
+    font-size: calc(1.25rem + 1vw);
     width: 100%;
     flex: 1;
-    margin-top: 10%;
+    margin: 0 auto;
+    padding: 2% 5% 0 5%;
+    font-family: var(--header-text);
 }
 
 .convince {
-    border: 1px solid purple;
     margin: 5% 0;
 }
 
-form {
-    border: 3px solid black;
+.form-div {
     width: 100%;
+    padding: 0 10%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px #333;
+    min-width: 400px;
+    background-color: #e6eeff;
+}
+
+form {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 400px;
+}
+
+.title {
+    font-size: calc(2rem + .25vw);
+    padding: 10px 0;
+    color: var(--accent-color);
 }
 
 .section {
-    border: 2px solid green;
-    display: flex;
-    justify-content: baseline;
-    gap: 10px;
-}
-
-.section {
+    gap: 1.5rem;
     display: flex;
     width: 100%;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.section label {
+    padding: 10px;
+}
+
+.section input {
+    padding: 5px;
+    width: 80%;
+    min-width: 150px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.context {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.5rem + 1vw);
+    font-size: calc(1rem + .25vw)
 }
 
 p.account_exist {
-    border: 3px solid blue;
     width: 100%;
     flex: 1;
 }
